@@ -1,0 +1,44 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    docker:
+      - image: cimg/node:current
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      # - run: npm test
+
+  deploy_to_vercel:
+    docker:
+      - image: cimg/node:current
+    steps:
+      - checkout
+      - run: npm install
+      - run:
+          name: Install Vercel CLI
+          command: npm install -g vercel
+      - run:
+          name: Deploy to Vercel
+          command: |
+            if [ "${CIRCLE_BRANCH}" != "main" ]; then
+              # Deploy non-main branches to Vercel under preview deployments
+              vercel --token $VERCEL_TOKEN --confirm
+            else
+              echo "Main branch deployments are handled automatically by Vercel integration."
+            fi
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      # - test
+      - build_and_test
+      - deploy_to_vercel:
+          requires:
+            #  - test
+            - build_and_test
+          filters:
+            branches:
+              ignore: main
