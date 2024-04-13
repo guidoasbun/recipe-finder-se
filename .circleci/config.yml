@@ -15,10 +15,10 @@ jobs:
       - image: cimg/node:current
     steps:
       - checkout
-      - run: npm install
+      - run: sudo npm install
       - run:
           name: Install Vercel CLI
-          command: npm install -g vercel
+          command: sudo npm install -g vercel
       - run:
           name: Deploy to Vercel
           command: |
