@@ -5,9 +5,16 @@ import React from "react";
 import { Input, Button } from "@material-tailwind/react";
 
 export default function EnterIngredients() {
-  const [ingredient, setEmail] = React.useState("");
-  const onChange = ({ target }) => setIngredient(target.value);
- 
+  const [ingredient1, setIngredient1] = useState("");
+  const [ingredient2, setIngredient2] = useState("");
+  const [ingredient3, setIngredient3] = useState("");
+  const onChange1 = ({ target }) => setIngredient1(target.value);
+  const onChange2 = ({ target }) => setIngredient2(target.value);
+  const onChange3 = ({ target }) => setIngredient3(target.value);
+  const getIngredients = () => {
+    const string = ingredient1 + "+" + ingredient2 + "+" + ingredient3 
+    /* Go to next page */}
+
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <p className="text-4xl font-bold text-center pb-10">Enter your ingredients here:</p>
@@ -15,58 +22,42 @@ export default function EnterIngredients() {
         <Input
           type="ingredient"
           label="Ingredient"
-          value={ingredient}
-          onChange={onChange}
+          value={ingredient1}
+          onChange={onChange1}
           className="pr-20"
           containerProps={{
             className: "min-w-0",
           }}
         />
-        <Button
-          size="sm"
-          color={ingredient ? "gray" : "blue-gray"}
-          disabled={!ingredient}
-          className="!absolute right-1 top-1 rounded"
-        >
-          Enter
-        </Button>
       </div>
       <div className="relative flex w-full max-w-[24rem] pb-10">
         <Input
           type="ingredient"
           label="Ingredient"
-          value={ingredient}
-          onChange={onChange}
+          value={ingredient2}
+          onChange={onChange2}
           className="pr-20"
           containerProps={{
             className: "min-w-0",
           }}
         />
-        <Button
-          size="sm"
-          color={ingredient ? "gray" : "blue-gray"}
-          disabled={!ingredient}
-          className="!absolute right-1 top-1 rounded"
-        >
-          Enter
-        </Button>
       </div>
       <div className="relative flex w-full max-w-[24rem] pb-10">
         <Input
           type="ingredient"
           label="Ingredient"
-          value={ingredient}
-          onChange={onChange}
+          value={ingredient3}
+          onChange={onChange3}
           className="pr-20"
           containerProps={{
             className: "min-w-0",
           }}
         />
-        <Button
-          size="sm"
-          color={ingredient ? "gray" : "blue-gray"}
-          disabled={!ingredient}
-          className="!absolute right-1 top-1 rounded"
+      </div>
+      <div>
+        <Button 
+          onClick={getIngredients}
+          ripple={true}
         >
           Enter
         </Button>
