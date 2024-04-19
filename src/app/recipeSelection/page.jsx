@@ -4,4 +4,5 @@ export default function RecipeSelection() {
       <p className="text-4xl font-bold text-center">Recipe Selection</p>
     </main>
   );
+
 }
