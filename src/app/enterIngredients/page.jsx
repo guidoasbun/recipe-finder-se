@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import React from "react";
@@ -12,12 +12,16 @@ export default function EnterIngredients() {
   const onChange2 = ({ target }) => setIngredient2(target.value);
   const onChange3 = ({ target }) => setIngredient3(target.value);
   const getIngredients = () => {
-    const string = ingredient1 + "+" + ingredient2 + "+" + ingredient3 
-    /* Go to next page */}
+    const string = ingredient1 + "+" + ingredient2 + "+" + ingredient3;
+    console.log(string.toLowerCase());
+    /* Go to next page */
+  };
 
   return (
     <main className="flex flex-col items-center justify-between p-24">
-      <p className="text-4xl font-bold text-center pb-10">Enter your ingredients here:</p>
+      <p className="text-4xl font-bold text-center pb-10">
+        Enter your ingredients here:
+      </p>
       <div className="relative flex w-full max-w-[24rem] pb-10">
         <Input
           type="ingredient"
@@ -55,10 +59,7 @@ export default function EnterIngredients() {
         />
       </div>
       <div>
-        <Button 
-          onClick={getIngredients}
-          ripple={true}
-        >
+        <Button onClick={getIngredients} ripple={true}>
           Enter
         </Button>
       </div>

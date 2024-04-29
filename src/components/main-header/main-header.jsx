@@ -20,9 +20,7 @@ export default function MainHeader() {
           <li className="pr-10">
             <Link href="/enterIngredients">Enter Ingredients</Link>
           </li>
-          <li className="pr-10">
-            <Link href="/waitPage">Wait Page</Link>
-          </li>
+
           <li className="pr-10">
             <Link href="/recipeSelection">Recipe Selection</Link>
           </li>

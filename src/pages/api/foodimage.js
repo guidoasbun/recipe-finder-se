@@ -1,4 +1,4 @@
-import openai from "@/utils/openai";
+import { openaiImages } from "@/utils/openai";
 
 export default async function handler(req, res) {
   const { foodName } = req.body;
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const testName = "tacos";
 
   try {
-    const foodImage = await openai.images.generate({
+    const foodImage = await openaiImages.images.generate({
       model: "dall-e-3",
       prompt: `${testName}`,
       n: 1,
