@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={inter.className}>
           <MainHeader />
-          {children}
+          <main className="mx-auto max-w-screen-xl px-4 py-2">{children}</main>
         </body>
       </html>
     </ClerkProvider>
