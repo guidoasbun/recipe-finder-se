@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
+import { Button } from "@material-tailwind/react";
 
 export default function Home() {
   return (
@@ -9,16 +10,16 @@ export default function Home() {
         reliable recipe searches with any ingredients in your pantry!
       </p>
       <p className="text-5xl">Let&apos;s get started!</p>
-      <div className="flex flex-col">
-        <Link href="/sign-up">
-          <button className="transition-colors ease-in-out bg-slate-300 hover:bg-transparent border-2 py-5 px-20 text-xl rounded-2xl mx-10">
+      <div className="flex flex-col items-center">
+        <Link href="/sign-up" className="mb-5">
+          <Button variant="outlined" className="w-64 mx-10 text-xl px-20">
             Sign Up
-          </button>
+          </Button>
         </Link>
         <Link href="/sign-in">
-          <button className="transition-colors ease-in-out bg-transparent hover:bg-slate-300 border-2 py-5 px-20 m-5 text-xl rounded-2xl mx-10 ">
+          <Button variant="outlined" className="w-64 mx-10 text-xl px-20">
             Log In
-          </button>
+          </Button>
         </Link>
       </div>
 
