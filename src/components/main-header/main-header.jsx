@@ -22,9 +22,7 @@ function NavList() {
           color="blue-gray"
           className="p-1 font-medium" // Add additional styling as needed
         >
-          <a className="flex items-center hover:text-blue-500 transition-colors">
-            Home
-          </a>
+          Home
         </Typography>
       </Link>
 
@@ -34,9 +32,7 @@ function NavList() {
           color="blue-gray"
           className="p-1 font-medium" // Add additional styling as needed
         >
-          <a className="flex items-center hover:text-blue-500 transition-colors">
-            Enter Ingredients
-          </a>
+          Enter Ingredients
         </Typography>
       </Link>
 
@@ -63,14 +59,16 @@ export default function MainHeader() {
   return (
     <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h1"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          Chef-AI
-        </Typography>
+        <Link href="/">
+          <Typography
+            variant="h1"
+            color="blue-gray"
+            className="mr-4 cursor-pointer py-1.5"
+          >
+            Chef-AI
+          </Typography>
+        </Link>
+
         <div className="hidden lg:block">
           {/*Display the navbar only if the User is logged in*/}
           {isLoaded && user && <NavList />}
