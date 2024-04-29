@@ -1,9 +1,9 @@
-import openai from "@/utils/openai";
+import { openai } from "@/utils/openai";
 
 export default async function handler(req, res) {
   const { ingredients } = req.body;
 
-  const testIngredients = "chicken,apples,flour";
+  const testIngredients = "beef,tortilla,onion";
 
   try {
     const recipeReturn = await openai.chat.completions.create({
@@ -11,7 +11,9 @@ export default async function handler(req, res) {
       messages: [
         {
           role: "user",
-          content: `Create 3 recipes I can create with ${testIngredients} Can you format the response as JSON with the title, ingredients, and instructions`,
+          content: `Create 3 recipes I can create with ${testIngredients} 
+          Can you format the response as JSON with the title, ingredients, 
+          and instructions`,
         },
       ],
     });
