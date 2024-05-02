@@ -3,7 +3,8 @@ export const RECIPE_JSON_FORMAT = {
     {
       title: "",
       ingredients: {
-        "": "",
+        measurement: "",
+        name: "",
       },
       instructions: "",
     },

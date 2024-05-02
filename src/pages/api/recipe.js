@@ -1,7 +1,7 @@
 import { openai } from "@/utils/openai";
 import { RECIPE_JSON_FORMAT } from "@/data/recipe-format";
 
-export default async function handler(req, res) {
+export default async function GET(req, res) {
   const { ingredients } = req.body;
 
   const testIngredients = "beef,tortilla,onion";
