@@ -1,46 +1,93 @@
 export const dummyRecipe = {
   recipes: [
     {
-      title: "Chicken and Apple Stir Fry",
-      ingredients: {
-        chicken: "1 lb chicken breast, cut into bite-sized pieces",
-        apples: "2 apples, thinly sliced",
-        flour: "2 tbsp flour",
-        "soy sauce": "1/4 cup soy sauce",
-        ginger: "1 tbsp minced ginger",
-        garlic: "2 cloves garlic, minced",
-        oil: "2 tbsp oil",
-      },
+      title: "Beef and Onion Tacos",
+      ingredients: [
+        {
+          measurement: "1 lb",
+          name: "beef",
+        },
+        {
+          measurement: "1",
+          name: "onion",
+        },
+        {
+          measurement: "8",
+          name: "tortillas",
+        },
+        {
+          measurement: "",
+          name: "salt",
+        },
+        {
+          measurement: "",
+          name: "pepper",
+        },
+        {
+          measurement: "",
+          name: "oil",
+        },
+      ],
       instructions:
-        "In a bowl, toss the chicken pieces with flour. Heat oil in a pan over medium high heat. Add the chicken and cook until browned. Add the sliced apples, ginger, and garlic. Cook for a few minutes until apples are slightly soft. Stir in soy sauce and cook for another minute. Serve hot with rice.",
+        "1. Heat oil in a pan\n2. Cook beef until browned\n3. Add chopped onions and season with salt and pepper\n4. Warm tortillas and fill with beef mixture\n5. Enjoy your tacos!",
     },
     {
-      title: "Apple Stuffed Chicken Breast",
-      ingredients: {
-        chicken: "4 chicken breasts",
-        apples: "2 apples, diced",
-        flour: "1/4 cup flour",
-        butter: "2 tbsp butter",
-        sage: "1 tsp dried sage",
-        salt: "1/2 tsp salt",
-        pepper: "1/4 tsp pepper",
-      },
+      title: "Onion Beef Stir Fry",
+      ingredients: [
+        {
+          measurement: "1 lb",
+          name: "beef",
+        },
+        {
+          measurement: "1",
+          name: "onion",
+        },
+        {
+          measurement: "",
+          name: "salt",
+        },
+        {
+          measurement: "",
+          name: "pepper",
+        },
+        {
+          measurement: "",
+          name: "oil",
+        },
+      ],
       instructions:
-        "Preheat oven to 350°F. In a bowl, mix together diced apples, flour, butter, sage, salt, and pepper. Cut a pocket into each chicken breast and stuff with the apple mixture. Place chicken breasts in a baking dish and bake for 25-30 minutes until chicken is cooked through. Serve hot.",
+        "1. Slice beef into thin strips\n2. Heat oil in a wok or large skillet\n3. Add beef and onions, season with salt and pepper\n4. Stir fry until beef is cooked through\n5. Serve hot over rice or noodles",
     },
     {
-      title: "Apple Chicken Curry",
-      ingredients: {
-        chicken: "1 lb chicken thighs, cut into bite-sized pieces",
-        apples: "2 apples, cubed",
-        flour: "2 tbsp flour",
-        "coconut milk": "1 can coconut milk",
-        "curry powder": "2 tbsp curry powder",
-        onion: "1 onion, chopped",
-        garlic: "2 cloves garlic, minced",
-      },
+      title: "Beef and Onion Quesadillas",
+      ingredients: [
+        {
+          measurement: "1 lb",
+          name: "beef",
+        },
+        {
+          measurement: "1",
+          name: "onion",
+        },
+        {
+          measurement: "8",
+          name: "tortillas",
+        },
+        {
+          measurement: "",
+          name: "salt",
+        },
+        {
+          measurement: "",
+          name: "pepper",
+        },
+        {
+          measurement: "",
+          name: "oil",
+        },
+      ],
       instructions:
-        "In a bowl, toss the chicken pieces with flour. In a large pot, sauté onion and garlic until fragrant. Add the chicken and cook until browned. Stir in the curry powder and cook for a minute. Add cubed apples and coconut milk. Simmer for 20-25 minutes until chicken is cooked through. Serve hot with rice or naan bread.",
+        "1. Cook beef in a skillet until browned\n2. Add chopped onions and season with salt and pepper\n3. Place tortilla in another skillet, top with beef mixture and another tortilla\n4. Cook until tortilla is crispy and cheese is melted\n5. Cut into wedges and enjoy",
     },
   ],
 };
