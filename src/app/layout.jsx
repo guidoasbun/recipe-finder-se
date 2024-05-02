@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import MainHeader from "@/components/main-header/main-header";
 import { ClerkProvider } from "@clerk/nextjs";
+import { AppWrapper } from "@/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,12 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <MainHeader />
-          <main className="mx-auto max-w-screen-xl px-4 py-2">{children}</main>
+          <AppWrapper>
+            <MainHeader />
+            <main className="mx-auto max-w-screen-xl px-4 py-2">
+              {children}
+            </main>
+          </AppWrapper>
         </body>
       </html>
     </ClerkProvider>
