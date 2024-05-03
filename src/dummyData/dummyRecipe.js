@@ -34,6 +34,7 @@ export const dummyRecipe = {
     },
     {
       title: "Onion Beef Stir Fry",
+      description: "Hello, I am a description",
       ingredients: [
         {
           measurement: "1 lb",
@@ -61,6 +62,7 @@ export const dummyRecipe = {
     },
     {
       title: "Beef and Onion Quesadillas",
+      description: "Hello, I am a description",
       ingredients: [
         {
           measurement: "1 lb",
