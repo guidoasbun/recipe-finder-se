@@ -3,6 +3,7 @@ import { RECIPE_JSON_FORMAT } from "@/data/recipe-format";
 
 export default async function GET(req, res) {
   const { ingredients } = req.body;
+  console.log(`Ingredients: ${ingredients}`);
 
   const testIngredients = "beef,tortilla,onion";
 
