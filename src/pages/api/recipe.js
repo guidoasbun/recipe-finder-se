@@ -1,10 +1,9 @@
 import { openai } from "@/utils/openai";
 import { RECIPE_JSON_FORMAT } from "@/data/recipe-format";
 
-export default async function GET(req, res) {
+export default async function handler(req, res) {
   const { ingredients } = req.body;
-
-  const testIngredients = "beef,tortilla,onion";
+  console.log(`Ingredients from API Backend: ${ingredients}`);
 
   try {
     const recipeReturn = await openai.chat.completions.create({
@@ -13,7 +12,7 @@ export default async function GET(req, res) {
         {
           role: "user",
           content: `Create 3 eatable simple recipes I can create with these ingredients
-          ${testIngredients} . Assume I have basic cooking ingredients like salt, pepper, and oil. 
+          ${ingredients} . Assume I have basic cooking ingredients like salt, pepper, and oil. 
           The recipes should be simple and easy to follow.
           Ingredients are formatted by measurement and name.
           Instructions are seperated by instruction number and next line indicator.

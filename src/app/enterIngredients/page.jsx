@@ -11,13 +11,6 @@ export default function EnterIngredients() {
   const [readyToNavigate, setReadyToNavigate] = useState(false);
   const { setIngredientsContext } = useAppContext();
 
-  // const [ingredient1, setIngredient1] = useState("");
-  // const [ingredient2, setIngredient2] = useState("");
-  // const [ingredient3, setIngredient3] = useState("");
-
-  // const onChange1 = ({ target }) => setIngredient1(target.value);
-  // const onChange2 = ({ target }) => setIngredient2(target.value);
-  // const onChange3 = ({ target }) => setIngredient3(target.value);
   const onChange =
     (index) =>
     ({ target }) => {
@@ -27,10 +20,6 @@ export default function EnterIngredients() {
     };
 
   const getIngredients = () => {
-    //   const string = ingredient1 + "+" + ingredient2 + "+" + ingredient3;
-    //   console.log(string.toLowerCase());
-    //   /* Go to next page */
-
     const combinedIngredients = ingredients.join("+").toLowerCase();
     setIngredientsContext(combinedIngredients);
     setReadyToNavigate(true);
@@ -53,42 +42,6 @@ export default function EnterIngredients() {
           />
         </div>
       ))}
-      {/*<div className="relative flex w-full max-w-[24rem] pb-10">*/}
-      {/*  <Input*/}
-      {/*    type="ingredient"*/}
-      {/*    label="Ingredient"*/}
-      {/*    value={ingredient1}*/}
-      {/*    onChange={onChange1}*/}
-      {/*    className="pr-20"*/}
-      {/*    containerProps={{*/}
-      {/*      className: "min-w-0",*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*</div>*/}
-      {/*<div className="relative flex w-full max-w-[24rem] pb-10">*/}
-      {/*  <Input*/}
-      {/*    type="ingredient"*/}
-      {/*    label="Ingredient"*/}
-      {/*    value={ingredient2}*/}
-      {/*    onChange={onChange2}*/}
-      {/*    className="pr-20"*/}
-      {/*    containerProps={{*/}
-      {/*      className: "min-w-0",*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*</div>*/}
-      {/*<div className="relative flex w-full max-w-[24rem] pb-10">*/}
-      {/*  <Input*/}
-      {/*    type="ingredient"*/}
-      {/*    label="Ingredient"*/}
-      {/*    value={ingredient3}*/}
-      {/*    onChange={onChange3}*/}
-      {/*    className="pr-20"*/}
-      {/*    containerProps={{*/}
-      {/*      className: "min-w-0",*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*</div>*/}
       <div>
         {readyToNavigate ? (
           <Link href="/recipeSelection">
