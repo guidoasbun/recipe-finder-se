@@ -12,7 +12,8 @@ export default async function handler(req, res) {
         {
           role: "user",
           content: `Create 3 eatable simple recipes I can create with these ingredients
-          ${ingredients} . Assume I have basic cooking ingredients like salt, pepper, and oil. 
+          ${ingredients} . Assume I have basic cooking ingredients like salt, pepper, flour and oil.
+          Give me a brief description of the recipe. 
           The recipes should be simple and easy to follow.
           Ingredients are formatted by measurement and name.
           Instructions are seperated by instruction number and next line indicator.

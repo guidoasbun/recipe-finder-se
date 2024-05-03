@@ -2,6 +2,7 @@ export const dummyRecipe = {
   recipes: [
     {
       title: "Beef and Onion Tacos",
+      description: "Hello, I am a description",
       ingredients: [
         {
           measurement: "1 lb",
