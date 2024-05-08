@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useAppContext } from "@/context";
-import TestComponent from "@/components/test-component/test-component";
 import RecipeSelector from "@/components/recipe-card/recipe-selector";
 
 const GetRecipes = (ingredients) => {
