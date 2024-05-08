@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useAppContext } from "@/context";
 import RecipeSelector from "@/components/recipe-card/recipe-selector";
+import { Spinner } from "@material-tailwind/react";
 
 const GetRecipes = (ingredients) => {
   return fetch("/api/recipe", {
@@ -39,8 +40,11 @@ export default function RecipeSelection() {
 
   if (loading || recipesContext.length === 0) {
     return (
-      <main className="flex justify-center items-center p-24">
+      <main className="flex flex-col justify-center items-center p-24 space-y-4">
         <p>Loading recipes...</p>
+        <div>
+          <Spinner className="h-16 w-16 text-gray-900/50" />
+        </div>
       </main>
     );
   } else {
