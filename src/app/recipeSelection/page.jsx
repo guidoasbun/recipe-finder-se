@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useAppContext } from "@/context";
+import RecipeSelector from "@/components/recipe-card/recipe-selector";
 
 const GetRecipes = (ingredients) => {
   return fetch("/api/recipe", {
@@ -13,28 +14,40 @@ const GetRecipes = (ingredients) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      return data; // Return the data so it can be used by the caller
+      return data;
     })
     .catch((error) => {
       console.error("Error fetching recipes:", error);
-      return []; // Return an empty array in case of error
+      return [];
     });
 };
 
 export default function RecipeSelection() {
-  const { ingredientsContext } = useAppContext();
-  const [recipes, setRecipes] = useState([]);
+  const { ingredientsContext, setRecipesContext, recipesContext } =
+    useAppContext();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (ingredientsContext) {
-      GetRecipes(ingredientsContext).then(setRecipes);
+      setLoading(true);
+      GetRecipes(ingredientsContext).then((data) => {
+        setRecipesContext(data);
+        setLoading(false);
+      });
     }
-  }, [ingredientsContext]);
+  }, [ingredientsContext, setRecipesContext]);
 
-  console.log("Recipes from setRecipes:", recipes);
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p className="text-4xl font-bold text-center">{ingredientsContext}</p>
-    </main>
-  );
+  if (loading || recipesContext.length === 0) {
+    return (
+      <main className="flex justify-center items-center p-24">
+        <p>Loading recipes...</p>
+      </main>
+    );
+  } else {
+    return (
+      <>
+        <RecipeSelector />
+      </>
+    );
+  }
 }

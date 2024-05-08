@@ -6,12 +6,15 @@ const AppContext = createContext();
 
 export function AppWrapper({ children }) {
   let [ingredientsContext, setIngredientsContext] = useState("");
+  let [recipesContext, setRecipesContext] = useState([]);
 
   return (
     <AppContext.Provider
       value={{
         ingredientsContext,
         setIngredientsContext,
+        recipesContext,
+        setRecipesContext,
       }}
     >
       {children}
@@ -20,5 +23,9 @@ export function AppWrapper({ children }) {
 }
 
 export function useAppContext() {
+  return useContext(AppContext);
+}
+
+export function useRecipesContext() {
   return useContext(AppContext);
 }

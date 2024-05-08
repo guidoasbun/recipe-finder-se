@@ -3,7 +3,6 @@ import { RECIPE_JSON_FORMAT } from "@/data/recipe-format";
 
 export default async function handler(req, res) {
   const { ingredients } = req.body;
-  console.log(`Ingredients from API Backend: ${ingredients}`);
 
   try {
     const recipeReturn = await openai.chat.completions.create({
