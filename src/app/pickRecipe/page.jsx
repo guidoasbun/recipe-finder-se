@@ -12,11 +12,11 @@ export default function pickRecipes() {
 
   return (
     <main className="flex flex-col items-center justify-between p-24">
-      <p className="text-4xl font-bold text-center pb-10">
+      <p className="text-5xl font-bold text-center pb-10">
         Select a recipe
       </p>
-      <div className="flex felx-wrap">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="flex flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-around gap-x-60">
           <div className="py-5">
               <CardDefault 
                 props={recipe1}

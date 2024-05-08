@@ -22,15 +22,15 @@ import {
           />
         </CardHeader>
         <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
+          <Typography variant="h5" color="blue-gray" className="mb-2 text-center text-2xl">
             {props.title}
           </Typography>
-          <Typography>
+          <Typography className="text-xl">
             {props.description}
         </Typography>
         </CardBody>
         <CardFooter className="pt-0 flex justify-center">
-          <Button ripple={true}>Select Recipe</Button>
+          <Button ripple={true} className="text-sm">Select Recipe</Button>
         </CardFooter>
       </Card>
     );

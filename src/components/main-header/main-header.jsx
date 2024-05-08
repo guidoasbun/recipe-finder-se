@@ -18,9 +18,9 @@ function NavList() {
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Link href="/">
         <Typography
-          variant="small" // Adjust the variant as needed
+          variant="paragraph" // Adjust the variant as needed
           color="blue-gray"
-          className="p-1 font-medium" // Add additional styling as needed
+          className="p-1 font-medium text-lg transition ease-in-out hover:opacity-50" // Add additional styling as needed
         >
           Home
         </Typography>
@@ -28,9 +28,9 @@ function NavList() {
 
       <Link href="/enterIngredients">
         <Typography
-          variant="small" // Adjust the variant as needed
+          variant="paragraph" // Adjust the variant as needed
           color="blue-gray"
-          className="p-1 font-medium" // Add additional styling as needed
+          className="p-1 font-medium text-lg transition ease-in-out hover:opacity-50" // Add additional styling as needed
         >
           Enter Ingredients
         </Typography>
