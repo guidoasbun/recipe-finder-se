@@ -12,17 +12,24 @@ import foodImage from "@/assets/images/food_moritsuke_good.png";
 
 export function CardDefault({ props }) {
   return (
-    <Card className="mt-6 w-96">
-      <CardHeader color="blue-gray" className="relative h-56">
-        <Image src={foodImage} alt="card-image" width={400} height={400} />
+    <Card className="mt-6 w-full max-w-xs md:max-w-none h-auto md:h-96 flex flex-col">
+      <CardHeader color="blue-gray" className="relative h-40">
+        <div>
+          <Image
+            src={foodImage}
+            alt="card-image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </CardHeader>
-      <CardBody>
+      <CardBody className="flex-grow">
         <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
           {props.title}
         </Typography>
         <Typography>{props.description}</Typography>
       </CardBody>
-      <CardFooter className="pt-0 flex justify-center">
+      <CardFooter className="flex justify-center mt-auto">
         <Button ripple={true}>Select Recipe</Button>
       </CardFooter>
     </Card>
