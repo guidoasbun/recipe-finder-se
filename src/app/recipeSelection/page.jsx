@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useAppContext } from "@/context";
-import RecipeSelector from "@/components/recipe-card/recipe-selector";
+import RecipeSelector from "@/components/recipe-selection-card/recipe-selector";
 import { Spinner } from "@material-tailwind/react";
 
 const GetRecipes = (ingredients) => {

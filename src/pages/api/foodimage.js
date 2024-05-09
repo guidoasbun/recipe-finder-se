@@ -3,12 +3,12 @@ import { openaiImages } from "@/utils/openai";
 export default async function handler(req, res) {
   const { foodName } = req.body;
 
-  const testName = "tacos";
+  console.log(`Generating image for food: ${foodName}`);
 
   try {
     const foodImage = await openaiImages.images.generate({
       model: "dall-e-3",
-      prompt: `${testName}`,
+      prompt: `${foodName}`,
       n: 1,
       size: "1024x1024",
     });
