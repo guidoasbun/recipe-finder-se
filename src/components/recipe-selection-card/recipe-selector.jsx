@@ -15,16 +15,15 @@ export default function RecipeSelector() {
           <p className="text-4xl font-bold text-center pb-10">
             Select a recipe
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
             <div className="md:col-span-1 lg:col-span-1">
-              <CardDefault props={recipe1} />
+              <CardDefault props={recipe1} recipeNumber={0} />
             </div>
             <div className="md:col-span-1 lg:col-span-1">
-              <CardDefault props={recipe2} />
+              <CardDefault props={recipe2} recipeNumber={1} />
             </div>
             <div className="md:col-span-1 lg:col-span-1">
-              <CardDefault props={recipe3} />
+              <CardDefault props={recipe3} recipeNumber={2} />
             </div>
           </div>
         </main>
