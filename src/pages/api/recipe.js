@@ -15,7 +15,7 @@ export default async function handler(req, res) {
           Give me a brief description of the recipe. 
           The recipes should be simple and easy to follow.
           Ingredients are formatted by measurement and name.
-          Instructions are seperated by instruction number and next line indicator.
+          Instructions are formatted by instructionNumber and instruction.
           Format the response in the following JSON object: ${JSON.stringify(
             RECIPE_JSON_FORMAT,
           )}. `,
