@@ -2,6 +2,7 @@
 
 import { useAppContext } from "@/context";
 import { useEffect, useState } from "react";
+import RecipeCard from "@/components/recipe-card/recipe-card";
 
 const GetFoodImage = (foodName) => {
   return fetch("/api/foodimage", {
@@ -39,9 +40,17 @@ export default function RecipeSelected({ params }) {
     });
   }, [foodName]);
 
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p className="text-4xl font-bold text-center">{recipeNumber}</p>
-    </main>
-  );
+  if (loading || foodImage === "") {
+    return (
+      <main className="flex flex-col justify-center items-center p-24 space-y-4">
+        <p>Loading food image...</p>
+      </main>
+    );
+  } else {
+    return (
+      <main className="flex min-h-screen flex-col items-center pt-5">
+        <RecipeCard recipe={recipe} image={foodImage} />
+      </main>
+    );
+  }
 }

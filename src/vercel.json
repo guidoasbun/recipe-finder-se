@@ -2,6 +2,9 @@
   "functions" : {
     "api/recipe.js" : {
       "maxDuration": 30
+    },
+    "api/foodimage.js" : {
+      "maxDuration": 30
     }
   }
 }

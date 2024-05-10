@@ -6,10 +6,9 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import Link from "next/link";
 
 export default function InstructionsCard({ instructions }) {
-  console.log("InstructionsCard:", instructions);
-
   const renderInstructions = instructions.map(
     ({ instructionNumber, instruction }, key) => (
       <Typography key={key} color="gray" className="mb-2 font-normal">
@@ -27,7 +26,9 @@ export default function InstructionsCard({ instructions }) {
         {renderInstructions}
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Search another recipe</Button>
+        <Link href="/enterIngredients">
+          <Button>Search another recipe</Button>
+        </Link>
       </CardFooter>
     </Card>
   );
