@@ -41,7 +41,10 @@ export default function RecipeSelection() {
   if (loading || recipesContext.length === 0) {
     return (
       <main className="flex flex-col justify-center items-center p-24 space-y-4">
-        <p>Loading recipes...</p>
+        <div className="pb-10">
+          <p>Loading recipes...</p>
+        </div>
+
         <div>
           <Spinner className="h-16 w-16 text-gray-900/50" />
         </div>
