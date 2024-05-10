@@ -27,7 +27,7 @@ export default function InstructionsCard({ instructions }) {
       </CardBody>
       <CardFooter className="pt-0">
         <Link href="/enterIngredients">
-          <Button>Search another recipe</Button>
+          <Button className="text-xl">Search another recipe</Button>
         </Link>
       </CardFooter>
     </Card>

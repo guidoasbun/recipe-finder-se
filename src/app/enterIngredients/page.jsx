@@ -27,9 +27,10 @@ export default function EnterIngredients() {
 
   return (
     <main className="flex flex-col items-center justify-between p-24">
-      <p className="text-4xl font-bold text-center pb-10">
-        Enter your ingredients here:
-      </p>
+      <div className="mb-10">
+        <p className="text-5xl">Enter your ingredients here:</p>
+      </div>
+
       {ingredients.map((ingredient, index) => (
         <div key={index} className="relative flex w-full max-w-[24rem] pb-10">
           <Input
@@ -42,15 +43,19 @@ export default function EnterIngredients() {
           />
         </div>
       ))}
+
       <div>
         {readyToNavigate ? (
           <Link href="/recipeSelection">
-            <Button onClick={getIngredients} ripple={true}>
+            <Button
+              onClick={getIngredients}
+              className="w-64 mx-10 text-xl px-20"
+            >
               Enter
             </Button>
           </Link>
         ) : (
-          <Button onClick={getIngredients} ripple={true}>
+          <Button onClick={getIngredients} className="w-64 mx-10 text-xl px-20">
             Enter
           </Button>
         )}

@@ -8,7 +8,6 @@ import {
   Collapse,
   Typography,
   IconButton,
-  ListItem,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useUser } from "@clerk/nextjs";
@@ -16,11 +15,11 @@ import { useUser } from "@clerk/nextjs";
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Link href="/">
+      <Link href="/" className="pr-5">
         <Typography
           variant="small" // Adjust the variant as needed
           color="blue-gray"
-          className="p-1 font-medium" // Add additional styling as needed
+          className="p-1 font-medium text-2xl" // Add additional styling as needed
         >
           Home
         </Typography>
@@ -30,7 +29,7 @@ function NavList() {
         <Typography
           variant="small" // Adjust the variant as needed
           color="blue-gray"
-          className="p-1 font-medium" // Add additional styling as needed
+          className="p-1 font-medium text-2xl" // Add additional styling as needed
         >
           Enter Ingredients
         </Typography>

@@ -12,9 +12,9 @@ export default function RecipeSelector() {
     <div>
       <div>
         <main className="flex flex-col items-center justify-center p-4 md:p-24">
-          <p className="text-4xl font-bold text-center pb-10">
-            Select a recipe
-          </p>
+          <div className="mb-10">
+            <p className="text-5xl">Select A Recipe</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
             <div className="md:col-span-1 lg:col-span-1">
               <CardDefault props={recipe1} recipeNumber={0} />

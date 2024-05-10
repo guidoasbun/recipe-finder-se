@@ -27,7 +27,9 @@ export function CardDefault({ props, recipeNumber }) {
       </CardBody>
       <CardFooter className="flex justify-center mt-auto">
         <Link href={`/recipeSelection/${recipeNumber}`}>
-          <Button ripple={true}>Select Recipe</Button>
+          <Button ripple={true} className="w-64 mx-10 px-20">
+            Select Recipe
+          </Button>
         </Link>
       </CardFooter>
     </Card>
