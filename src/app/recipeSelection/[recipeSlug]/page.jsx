@@ -3,6 +3,7 @@
 import { useAppContext } from "@/context";
 import { useEffect, useState } from "react";
 import RecipeCard from "@/components/recipe-card/recipe-card";
+import { Spinner } from "@material-tailwind/react";
 
 const GetFoodImage = (foodName) => {
   return fetch("/api/foodimage", {
@@ -43,7 +44,13 @@ export default function RecipeSelected({ params }) {
   if (loading || foodImage === "") {
     return (
       <main className="flex flex-col justify-center items-center p-24 space-y-4">
-        <p>Loading food image...</p>
+        <div className="pb-10">
+          <p>Loading recipe...</p>
+        </div>
+
+        <div>
+          <Spinner className="h-16 w-16 text-gray-900/50" />
+        </div>
       </main>
     );
   } else {
