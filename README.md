@@ -46,7 +46,7 @@ This application also provides an OpenAI generated image of the recipe.
 2. Run `npm install` to install the dependencies
 3. Run `npm run dev` to start the development server
 4. Open your browser and navigate to `http://localhost:3000/` or the port specified in the terminal
-5. Enjoy the application!
+5. Enjoy the recipes!
 
 ### Application Screenshots
 ![Screenshot-1.png](src/assets/screenshots/Screenshot-1.png)
