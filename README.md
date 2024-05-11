@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chef-AI
 
-## Getting Started
+## Contributors
 
-First, run the development server:
+| Name           | Link to GitHub Account                     | Link to LinkedIn Account                 |
+|----------------|--------------------------------------------|------------------------------------------|
+| Guido Asbun    | [GitHub](https://github.com/guidoasbun)    | [Guido Asbun](https://www.linkedin.com/in/guidoasbun/) |
+| William Bui    | [GitHub](https://github.com/wnbui)         | [William Bui](https://www.linkedin.com/in/wnbui/) |
+| Adrian Vasquez | [GitHub](https://github.com/adriancancode) | [Adrian Vasquez](https://www.linkedin.com/in/adrian-vazquez-0630b22a2/) |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Link to deployed website:
+[Chef-AI](https://recipe-finder-se.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Link to GitHub Repository:
+[GitHub Repository](https://github.com/guidoasbun/recipe-finder-se)
 
-You can start editing the page by modifying `app/page`. The page auto-updates as you edit the file.
+### Link to Documentation
+[Documentation](src/assets/Documentation/Chef-AI-documentation.pdf)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Description
+This application uses the OpenAI API to provide users with recipes based on the ingredients they have at home. 
+Assuming the user has the basic ingredients in their pantry, the application will provide an AI generated recipe after 
+the user inputs 3 main ingredients they want to work with. 
 
-## Learn More
+This application also provides an OpenAI generated image of the recipe.
 
-To learn more about Next.js, take a look at the following resources:
+### Notable Technologies Used
+- Next.js
+- Tailwind CSS
+- JavaScript
+- OpenAI API
+- Vercel
+- CircleCI for CI/CD pipeline
+- Authentication through Clerk.com 
+  - SaaS for user authentication
+- Proper Software Engineering Principles
+  - Agile Development
+  - Test Driven Development
+  - Pair Programming
+  - Code Reviews
+  - Continuous Integration
+  - Continuous Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
