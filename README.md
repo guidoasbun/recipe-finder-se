@@ -15,7 +15,7 @@
 [GitHub Repository](https://github.com/guidoasbun/recipe-finder-se)
 
 ### Link to Documentation
-[Documentation](src/assets/Documentation/Chef-AI-documentation.pdf)
+[Documentation](src/assets/Documentation/Chef-AI-documentation-v2.pdf)
 
 ### Description
 This application uses the OpenAI API to provide users with recipes based on the ingredients they have at home. 
