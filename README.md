@@ -41,3 +41,18 @@ This application also provides an OpenAI generated image of the recipe.
   - Continuous Integration
   - Continuous Deployment
 
+### How to run the application
+1. Clone the repository
+2. Run `npm install` to install the dependencies
+3. Run `npm run dev` to start the development server
+4. Open your browser and navigate to `http://localhost:3000/` or the port specified in the terminal
+5. Enjoy the application!
+
+### Application Screenshots
+![Screenshot-1.png](src/assets/screenshots/Screenshot-1.png)
+![Screenshot-2.png](src/assets/screenshots/Screenshot-2.png)
+![Screenshot-3.png](src/assets/screenshots/Screenshot-3.png)
+![Screenshot-4.png](src/assets/screenshots/Screenshot-4.png)
+![Screenshot-5.png](src/assets/screenshots/Screenshot-5.png)
+![Screenshot-6.png](src/assets/screenshots/Screenshot-6.png)
+![Screenshot-7.png](src/assets/screenshots/Screenshot-7.png)
